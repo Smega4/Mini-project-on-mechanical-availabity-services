@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Example</title>
+  <style>
+    /* Your button styles here */
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .button-card {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      margin: 10px;
+      padding: 30px; /* Increased padding for larger cards */
+      display: inline-block;
+      text-align: center;
+      width: 300px; /* Adjust the width as needed */
+    }
+
+    .button {
+      padding: 15px 30px; /* Adjust the padding for larger buttons */
+      font-size: 18px; /* Increased font size for larger buttons */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    .button1 {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .button2 {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    .button3 {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .button4 {
+      background-color: #f39c12;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="button-container">
+  <div class="button-card">
+    <button class="button button1" onclick="redirectToHome()">Home</button>
+  </div>
+
+  <div class="button-card">
+    <button class="button button2" onclick="redirectToService()">Service</button>
+  </div>
+</div>
+
+<div class="button-container">
+  <div class="button-card">
+    <button class="button button3" onclick="redirectToSignUp()">User</button>
+  </div>
+
+  <div class="button-card">
+    <button class="button button4" onclick="redirectToVerify()">Verify</button>
+  </div>
+</div>
+
+<script>
+  function redirectToHome() {
+    // Redirect to home page
+    window.location.href = "home.html"; // Replace with your actual home page URL
+  }
+
+  function redirectToService() {
+    // Redirect to services page
+    window.location.href = "NewFile4.jsp"; // Replace with your actual services page URL
+  }
+
+  function redirectToSignUp() {
+    // Redirect to sign-up page
+    window.location.href = "User.jsp"; // Replace with your actual sign-up page URL
+  }
+
+  function redirectToVerify() {
+    // Redirect to verify page
+    window.location.href = "Verify.jsp"; // Replace with your actual verify page URL
+  }
+</script>
+</body>
+</html>

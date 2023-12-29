@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Add styles for feedback form container */
+        .feedback-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50%;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        /* Style for the feedback form */
+        .feedback-form {
+            width: 50%;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style for the ratings and comments */
+        .rating-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .rating-input {
+            margin-bottom: 10px;
+        }
+
+        .comment-label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .comment-input {
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the submit button */
+        .submit-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Style for quotes */
+        .quotes-container {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Style for individual quotes */
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Add more styles as needed */
+
+    </style>
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>Feedback Session</h2>
+        <form class="feedback-form">
+            <label for="rating" class="rating-label">Rate our website:</label>
+            <select id="rating" name="rating" class="rating-input">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+            </select>
+
+            <label for="comments" class="comment-label">Comments:</label>
+            <textarea id="comments" name="comments" class="comment-input" placeholder="Please provide your comments here..."></textarea>
+
+            <button type="submit" class="submit-button">Submit Feedback</button>
+        </form>
+    </div>
+
+    <!-- Quotes section -->
+    <div class="quotes-container">
+        
+       
+        <p class="quote">"Your feedback helps us improve our services."</p>
+        <p class="quote">"We value your opinion and strive for excellence."</p>
+        <!-- Add more quotes as needed -->
+    </div>
+
+    <!-- Add more HTML content or styles as needed -->
+
+</body>
+</html>
+ 

@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Mechanic Shop Details</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+    /* Your CSS styles here */
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    .nav {
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 20px;
+    }
+    .mechanic-details {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .table-container {
+        margin-top: 20px;
+    }
+    .table-container table {
+        width: 100%;
+    }
+    .table-container table th,
+    .table-container table td {
+        text-align: left;
+        padding: 8px;
+    }
+    .visit-button {
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .search-bar {
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body ng-app="mechanicShopApp">
+<div class="nav">
+    Mechanic Shop Details
+</div>
+<div ng-controller="mechanicShopController">
+    <div class="search-bar">
+        <input type="text" ng-model="searchText" placeholder="Search Mechanic Shop" />
+    </div>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mechanic Shop Name</th>
+                    <th>Phone Number</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="shop in mechanicShops | filter: searchText">
+                    <td>{{ shop.name }}</td>
+                    <td>{{ shop.phoneNumber }}</td>
+                    <td>{{ shop.location }}</td>
+                    <td><button class="visit-button" ng-click="visitShop(shop)">Visit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ng-show="showServiceDetails">
+        <h4>Services Available:</h4>
+        <ul>
+            <li ng-repeat="service in selectedShop.services">{{ service }}</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var app = angular
+        .module("mechanicShopApp", [])
+        .controller("mechanicShopController", function ($scope) {
+            $scope.mechanicShops = [
+                {
+                    name: "Shop 1",
+                    phoneNumber: "+1234567890",
+                    location: "123 Main Street, City, Country",
+                    services: ["Car Service", "Bike Service", "Electrical Services"]
+                },
+                {
+                    name: "Shop 2",
+                    phoneNumber: "+9876543210",
+                    location: "456 Elm Street, Town, Country",
+                    services: ["Car Service", "Tire Rotation", "Brake Service"]
+                },
+                // Add more shop details as needed
+            ];
+
+            $scope.showServiceDetails = false;
+            $scope.selectedShop = {};
+
+            $scope.visitShop = function (shop) {
+                $scope.selectedShop = shop;
+                $scope.showServiceDetails = true;
+            };
+        });
+</script>
+</body>
+</html>
+ 

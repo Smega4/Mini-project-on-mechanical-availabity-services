@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registered Successfully</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+
+        .success-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .confetti {
+            animation: confetti 4s ease-in-out infinite;
+            position: absolute;
+            top: -50px;
+            font-size: 20px;
+        }
+
+        .checkmark {
+            color: green;
+            font-size: 36px;
+            margin-top: 10px;
+        }
+
+        @keyframes confetti {
+            0% {
+                transform: translateX(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(calc(100vw + 50px));
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h1>Registered successfully!</h1>
+        <div class="checkmark">&#10004;</div>
+        <div class="confetti" style="color: red;">&#127874;</div>
+        <div class="confetti" style="color: blue;">&#127874;</div>
+        <div class="confetti" style="color: green;">&#127874;</div>
+    </div>
+</body>
+</html>
+
+

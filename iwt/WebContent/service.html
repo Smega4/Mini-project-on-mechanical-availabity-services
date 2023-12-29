@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All of Our Services</title>
+    <style>
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhStBwqAY6jxMrPpbCNwXKGlCCZBBbM0qdsjcbExmGz9u9r7bExqxGhOcpB6080-elVBM&usqp=CAU");
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service-card {
+            width: 350px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .service-button {
+            width: 100%;
+            height: 40px;
+            margin: 10px 0;
+            padding: 0;
+            border: 1px solid white;
+            background: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .service-button:hover {
+            opacity: 0.7;
+        }
+
+        .service-button:active {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>All of Our Services</h1>
+    <h4>Users can choose from a variety of services offered by Greasehand.</h4>
+
+    <div class="service-container">
+        <div class="service-card">
+            <button class="service-button" onclick="redirectToCarService()">Car Service</button>
+        </div>
+
+        <div class="service-card">
+            <button class="service-button" onclick="redirectToBikeService()">Bike Service</button>
+        </div>
+
+        <div class="service-card">
+            <button class="service-button" onclick="redirectToWaterPurifierService()">Water Purifier Service</button>
+        </div>
+    </div>
+
+    <div class="service-container">
+        <div class="service-card">
+            <button class="service-button" onclick="redirectToWatchService()">Watch Service</button>
+        </div>
+
+        <div class="service-card">
+            <button class="service-button" onclick="redirectToElectronicService()">Electronic Service</button>
+        </div>
+
+        <div class="service-card">
+            <button class="service-button" onclick="redirectToHomeApplianceService()">Home Appliance Service</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToCarService() {
+            location.href = "home.jsp"; // Replace with the actual URL of your carservice.html page
+        }
+
+        function redirectToBikeService() {
+            location.href = "indexAction.jsp"; // Replace with the actual URL of your bikeservice.html page
+        }
+
+        function redirectToWaterPurifierService() {
+            location.href = "NewFile2.jsp"; // Replace with the actual URL of your waterpurifierservice.html page
+        }
+
+        function redirectToWatchService() {
+            location.href = "NewFile1.jsp"; // Replace with the actual URL of your watchservice.html page
+        }
+
+        function redirectToElectronicService() {
+            location.href = "NewFile.jsp"; // Replace with the actual URL of your electronicservice.html page
+        }
+
+        function redirectToHomeApplianceService() {
+            location.href = "NewFile3.jsp"; // Replace with the actual URL of your homeapplianceservice.html page
+        }
+    </script>
+</body>
+</html>

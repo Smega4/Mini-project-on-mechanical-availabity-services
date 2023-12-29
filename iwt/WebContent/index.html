@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+<body background="https://img.freepik.com/free-vector/digital-technology-engineering-digital-telecoms-concept-futuristic-technology-background-vector-illustration_587448-960.jpg">
+<style>
+  *{
+  margin:0px;
+  padding:0px;
+  }
+    body {
+      font-family: Arial, sans-serif;
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="number"], input[type="file"], input[type="date"], select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .error-message {
+      color: #ff0000;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    /* Added CSS for gender radio buttons */
+    .gender-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .gender-container label {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body background="C:\Users\Ramya\OneDrive\Desktop\backgroundimage.jpg">
+
+  <script>
+    // JavaScript code
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the form element
+      const form = document.querySelector('form');
+      const aadharNumberInput = document.getElementById('aadharNumber');
+      const phoneNumberInput = document.getElementById('phoneNumber');
+      const aadharNumberErrorMessage = document.getElementById('aadharNumberErrorMessage');
+      const phoneNumberErrorMessage = document.getElementById('phoneNumberErrorMessage');
+
+      // Add event listener for form submission
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Validate Aadhar Number length
+        if (aadharNumberInput.value.length !== 12) {
+          aadharNumberErrorMessage.style.display = 'block';
+          return;
+        } else {
+          aadharNumberErrorMessage.style.display = 'none';
+        }
+
+        // Validate Phone Number length
+        if (phoneNumberInput.value.length !== 10) {
+          phoneNumberErrorMessage.style.display = 'block';
+          return;
+        } else {
+          phoneNumberErrorMessage.style.display = 'none';
+        }
+
+        // If validation passes, submit the form
+        form.submit();
+      });
+
+      // Add event listener for input changes
+      aadharNumberInput.addEventListener('input', function() {
+        if (aadharNumberInput.value.length > 12) {
+          aadharNumberInput.value = aadharNumberInput.value.slice(0, 12);
+        }
+      });
+
+      phoneNumberInput.addEventListener('input', function() {
+        if (phoneNumberInput.value.length > 10) {
+          phoneNumberInput.value = phoneNumberInput.value.slice(0, 10);
+        }
+      });
+    });
+  </script>
+
+<body>
+  <div class="container">
+  
+    <h1>Sign Up</h1>
+   
+    <form action="Regi" method="post">
+
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+      <div id="phoneNumberErrorMessage" class="error-message" style="display: none;">Phone Number should be exactly 10 digits</div>
+
+      <label for="aadharNumber">Aadhar Number:</label>
+      <input type="text" id="aadharNumber" name="aadharNumber" pattern="[0-9]{12}" required>
+      <div id="aadharNumberErrorMessage" class="error-message" style="display: none;">Aadhar Number should be exactly 12 digits</div>
+
+      <label for="shopRegistrationNumber">Mechanics Shop Registration Number:</label>
+      <input type="text" id="shopRegistrationNumber" name="shopRegistrationNumber" required>
+
+      <label for="verificationCertificate">Verification Certificate:</label>
+      <input type="file" id="verificationCertificate" name="verificationCertificate" accept="image/jpeg, image/png" required>
+
+      <label for="profilePicture">Profile Picture:</label>
+      <input type="file" id="profilePicture" name="profilePicture" accept="image/jpeg, image/png" required>
+
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+      <label for="city">City:</label>
+      <select id="city" name="city" required>
+        <option value="">Select a city</option>
+        <option value="city1">tirunelveli</option>
+        <option value="city2">tuticorin</option>
+        <option value="city3">madurai</option>
+       <option value="city4">tirchy</option>
+      <option value="city5">dharmapuri</option>
+     <option value="city6">arcot</option>
+<option value="city7">nagercoil</option>
+<option value="city8">salem</option>
+<option value="city9">chengalpattu</option>
+<option value="city10">chennai</option>
+<option value="city11">rajapalayam</option>
+<option value="city12">thanjavur</option>
+
+        <!-- Add more options as needed -->
+      </select>
+
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="yearsOfService">Years of Service:</label>
+      <input type="text" id="yearsOfService" name="yearsOfService" required>
+
+      <div class="gender-container">
+        <label>Gender:</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <label>Password:</label>
+        <input type="text" id="password" name="password" required>
+      
+
+      <label>Service:</label>
+      <div>
+        <input type="checkbox" id="morningAfternoon" name="service" value="morning-afternoon">
+        <label for="morningAfternoon">Morning-Afternoon</label>
+      </div>
+      <div>
+        <input type="checkbox" id="afternoonEvening" name="service" value="afternoon-evening">
+        <label for="afternoonEvening">Afternoon-Evening</label>
+      </div>
+      <div>
+        <input type="checkbox" id="eveningNight" name="service" value="evening-night">
+        <label for="eveningNight">Evening-Night</label>
+      </div>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</body>
+</html>
+ 

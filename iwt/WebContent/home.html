@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+<html>
+<head>
+     
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .background {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("C:\html\download.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        .nav {
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            padding: 20px;
+        }
+
+        .text-container {
+            text-align: center;
+        }
+
+        .button-container {
+            margin-left: 10px; /* Adjust the margin to control spacing */
+        }
+
+        .text-button {
+            margin-left: 10px; /* Adjust the margin to control spacing */
+            padding: 5px 10px;
+            border: none;
+            background: none;
+            color: black;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+        .text-button:hover {
+            text-decoration: none;
+        }
+
+        .image {
+            margin-right: 43px;
+            margin-left: 5px;
+        }
+
+        .about-us {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+         
+    </div>
+    <div class="button-container">
+        <button class="text-button" onclick="redirectToHome()">Home</button>
+        <button class="text-button" onclick="redirectToService()">Service</button>
+        <button class="text-button" onclick="redirectToSearch()">Search</button>
+        <button class="text-button" style="margin-left: 20px;" onclick="redirectToAdminPage()">Admin</button>
+        <button class="text-button" onclick="redirectTologinPage()">Log In</button>
+        <button class="text-button" onclick="redirectToSignUp()">Sign Up</button>
+        <button class="text-button" onclick="redirectToContact()">Contact</button>
+          <button class="text-button" onclick="redirectToLogout()">Logout</button>
+
+        
+    </div>
+
+    <!-- Rest of your HTML content here -->
+    <marquee width="100%" behavior="alternate" bgcolor="white">
+        <h1>GREASEHAND</h1>
+    </marquee>
+    <img src="https://webtk.sfastservices.com/blogimg/washing%20machine%20not%20working-sfastservices.png" height="400" width="590" alt="Image 1" class="image">
+     <img src="https://www.wespeakiot.com/wp-content/uploads/2017/12/when-products-turn-into-smart-services.jpg" height="400" width="590" alt="Image 2" class="image">
+    <img src="https://edurev.gumlet.io/ApplicationImages/Temp/2326698_a6e9b61d-e99a-4159-ba46-1dec10d91dad_lg.gif?w=400&dpr=2.6" height="400" width="590" alt="Image 3" class="image">
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to our website! Our dedicated to providing high-quality services.</p>
+        <p>Our mission is to provide information and resources, offer services and repairs, and promote customer satisfaction.</p>
+        <p>With years of experience in the industry, our team is committed to creating a community and support network.</p>
+        <p>Feel free to explore our website and contact us for any inquiries. We look forward to serving you!</p>
+    </div>
+    <div class="background"></div>
+    <script>
+        function redirectToHome() {
+            location.href = "home.html"; // Replace with the actual URL of the home page
+        }
+
+        function redirectToService() {
+            location.href = "service.html"; // Replace with the actual URL of the service page
+        }
+
+        function redirectToAdminPage() {
+            location.href = "admin.html"; // Replace with the actual URL of the admin page
+        }
+
+        function redirectTologinPage() {
+            location.href = "login.html"; // Replace with the actual URL of the login page
+        }
+
+        function redirectToSignUp() {
+            location.href = "index.html"; // Replace with the actual URL of the sign-up page
+        }
+
+        function redirectToSearch() {
+            location.href = "main.html"; // Replace with the actual URL of the search page
+        }
+        function redirectToContact() {
+            location.href = "Contact.html"; // Replace with the actual URL of your Contact Us page
+        }
+        function redirectToLogout() {
+            // Redirect to the logout page or perform logout actions here
+            location.href = "Logout.html"; // Replace with the actual URL or action for logout
+        }
+    </script>
+</body>
+</html>
+ 

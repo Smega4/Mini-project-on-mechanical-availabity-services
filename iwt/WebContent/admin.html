@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color green;
+        }
+
+        .login-btn:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('login-form');
+            
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevents the form from submitting
+                
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                // You can implement your validation logic here
+                // For demonstration, let's assume if username is 'admin' and password is 'password', it's valid
+                if (username === 'Ramya' && password === 'Ramya@123') {
+                    window.location.href = 'rum.html'; // Redirect to admin.html
+                } else {
+                    alert('Invalid credentials. Please try again.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
